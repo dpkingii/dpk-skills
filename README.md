@@ -1,19 +1,19 @@
-# dpkingii-skills
+# dpk-skills
 
 The Claude Code skills from my job search workflow.
 
 ## Install in Claude Code
 
 ```sh
-claude plugin marketplace add dpkingii/dpkingii-skills
-claude plugin install dpkingii-workflow@dpkingii-skills
+claude plugin marketplace add dpkingii/dpk-skills
+claude plugin install dpk-workflow@dpk-skills
 ```
 
 Restart Claude Code after installing. The plugin provides:
 
 | Command | What it does |
 | --- | --- |
-| `/dpkingii-workflow:applied` | Log job applications to a Google Sheet from links or screenshots, skipping duplicates |
+| `/dpk-workflow:applied` | Log job applications to a Google Sheet from links or screenshots, skipping duplicates |
 
 These are built around my own setup, so each one needs a little configuration before it works for you. More skills will be added over time.
 
