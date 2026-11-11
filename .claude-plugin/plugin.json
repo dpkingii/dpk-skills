@@ -1,0 +1,11 @@
+{
+  "name": "dpkingii-workflow",
+  "version": "1.0.0",
+  "description": "Log job applications to a Google Sheet from job links or screenshots, skipping duplicates.",
+  "author": {
+    "name": "Lianyu Peng"
+  },
+  "homepage": "https://github.com/dpkingii/dpkingii-skills",
+  "repository": "https://github.com/dpkingii/dpkingii-skills",
+  "license": "MIT"
+}

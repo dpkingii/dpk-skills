@@ -1,0 +1,16 @@
+{
+  "name": "dpkingii-skills",
+  "owner": {
+    "name": "Lianyu Peng"
+  },
+  "metadata": {
+    "description": "Claude Code skills from Lianyu Peng's job search workflow."
+  },
+  "plugins": [
+    {
+      "name": "dpkingii-workflow",
+      "source": "./",
+      "description": "Log job applications to a Google Sheet from job links or screenshots, skipping duplicates."
+    }
+  ]
+}
