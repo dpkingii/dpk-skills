@@ -1,0 +1,38 @@
+/** @OnlyCurrentDoc */
+const SHEET_NAME = '2026-2027';
+const SECRET = '__SECRET__';
+
+function sheet() {
+  return SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);
+}
+
+function setup() {
+  const header = sheet().getRange('E1');
+  if (!header.getValue()) header.setValue('Link');
+}
+
+function doPost(e) {
+  const req = JSON.parse(e.postData.contents);
+  if (req.secret !== SECRET) return reply({ ok: false, error: 'unauthorized' });
+
+  if (req.action === 'list') {
+    return reply({ ok: true, rows: sheet().getDataRange().getDisplayValues() });
+  }
+  if (req.action === 'append') {
+    req.rows.forEach((r) => {
+      sheet().appendRow([r.company, r.role, r.status || '', r.date, r.link || ''].map(plainText));
+    });
+    return reply({ ok: true, added: req.rows.length, lastRow: sheet().getLastRow() });
+  }
+  return reply({ ok: false, error: 'unknown action' });
+}
+
+// Job page text is untrusted, so it must never be evaluated as a spreadsheet formula.
+function plainText(value) {
+  const text = String(value);
+  return /^[=+\-@]/.test(text) ? "'" + text : text;
+}
+
+function reply(body) {
+  return ContentService.createTextOutput(JSON.stringify(body)).setMimeType(ContentService.MimeType.JSON);
+}
