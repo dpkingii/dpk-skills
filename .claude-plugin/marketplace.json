@@ -1,5 +1,5 @@
 {
-  "name": "dpkingii-skills",
+  "name": "dpk-skills",
   "owner": {
     "name": "Lianyu Peng"
   },
@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "dpkingii-workflow",
+      "name": "dpk-workflow",
       "source": "./",
       "description": "Log job applications to a Google Sheet from job links or screenshots, skipping duplicates."
     }
