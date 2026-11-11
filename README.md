@@ -53,6 +53,10 @@ claude plugin validate --strict .claude-plugin/marketplace.json
 claude plugin validate skills
 ```
 
+## Credits
+
+For UI skills, see [jakubkrehel/skills](https://github.com/jakubkrehel/skills). It covers interface polish, typography, color, layout and accessibility.
+
 ## License
 
 [MIT](LICENSE)
