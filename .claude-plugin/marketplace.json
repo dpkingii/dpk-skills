@@ -4,13 +4,13 @@
     "name": "Lianyu Peng"
   },
   "metadata": {
-    "description": "Claude Code skills from Lianyu Peng's job search workflow."
+    "description": "Claude Code skills for planning features, explaining code and tracking job applications."
   },
   "plugins": [
     {
       "name": "dpk-workflow",
       "source": "./",
-      "description": "Log job applications to a Google Sheet from job links or screenshots, skipping duplicates."
+      "description": "Write specs from an interview, explain technical ideas clearly, and log job applications to a Google Sheet."
     }
   ]
 }

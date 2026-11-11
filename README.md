@@ -1,6 +1,6 @@
 # dpk-skills
 
-The Claude Code skills from my job search workflow.
+Claude Code skills I use for planning features, explaining code and tracking job applications.
 
 ## Install in Claude Code
 
@@ -17,7 +17,7 @@ Restart Claude Code after installing. The plugin provides:
 | `/dpk-workflow:spec` | Interview you about an idea, skipping anything the code already answers, then write a spec to `.plans/` |
 | `/dpk-workflow:explain` | Explain a technical idea, or clean up a confusing explanation, for a specific reader |
 
-These are built around my own setup, so each one needs a little configuration before it works for you. More skills will be added over time.
+`spec` and `explain` work as is. `applied` is built around my own setup and needs the configuration below. More skills will be added over time.
 
 ## Setup
 

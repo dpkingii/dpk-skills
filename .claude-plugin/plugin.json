@@ -1,7 +1,7 @@
 {
   "name": "dpk-workflow",
   "version": "1.0.0",
-  "description": "Log job applications to a Google Sheet from job links or screenshots, skipping duplicates.",
+  "description": "Write specs from an interview, explain technical ideas clearly, and log job applications to a Google Sheet.",
   "author": {
     "name": "Lianyu Peng"
   },
