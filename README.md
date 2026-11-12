@@ -14,10 +14,11 @@ Restart Claude Code after installing. The plugin provides:
 | Command | What it does |
 | --- | --- |
 | `/dpk-workflow:applied` | Log job applications to a Google Sheet from links or screenshots, skipping duplicates |
+| `/dpk-workflow:apply` | Log an application with `applied`, then tailor a LaTeX resume to the posting and build the PDF |
 | `/dpk-workflow:spec` | Interview you about an idea, skipping anything the code already answers, then write a spec to `.plans/` |
 | `/dpk-workflow:explain` | Explain a technical idea, or clean up a confusing explanation, for a specific reader |
 
-`spec` and `explain` work as is. `applied` is built around my own setup and needs the configuration below. More skills will be added over time.
+`spec` and `explain` work as is. `applied` is built around my own setup and needs the configuration below. `apply` also expects my resume folder at `~/Documents/resume`, with its rules in `agent/CONTEXT.md` and checks in `agent/build.sh`. More skills will be added over time.
 
 ## Setup
 
