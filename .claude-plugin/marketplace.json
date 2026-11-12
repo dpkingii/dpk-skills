@@ -4,13 +4,13 @@
     "name": "Lianyu Peng"
   },
   "metadata": {
-    "description": "Claude Code skills for planning features, explaining code and tracking job applications."
+    "description": "Claude Code skills for planning features, explaining code, tracking job applications and tailoring resumes."
   },
   "plugins": [
     {
       "name": "dpk-workflow",
       "source": "./",
-      "description": "Write specs from an interview, explain technical ideas clearly, and log job applications to a Google Sheet."
+      "description": "Write specs from an interview, explain technical ideas clearly, log job applications to a Google Sheet, and tailor a resume to each one."
     }
   ]
 }

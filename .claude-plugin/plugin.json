@@ -1,7 +1,7 @@
 {
   "name": "dpk-workflow",
   "version": "1.0.0",
-  "description": "Write specs from an interview, explain technical ideas clearly, and log job applications to a Google Sheet.",
+  "description": "Write specs from an interview, explain technical ideas clearly, log job applications to a Google Sheet, and tailor a resume to each one.",
   "author": {
     "name": "Lianyu Peng"
   },
