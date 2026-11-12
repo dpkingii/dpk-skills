@@ -2,7 +2,7 @@
 name: apply
 description: Log a job application to the Job Applications Sheet and tailor the LaTeX resume for it in one step. Use when the user runs /apply with a job link, pasted posting or screenshot, or says they are applying to a job and want a tailored resume.
 argument-hint: <job link or pasted posting, or attach a screenshot>
-allowed-tools: Bash(python3 ~/.claude/skills/applied/tracker.py *), Bash(date *), Bash(~/Documents/resume/agent/build.sh *), Bash(mkdir -p ~/Documents/resume/tailored/*), Bash(cp ~/Documents/resume/*), Bash(open ~/Documents/resume/tailored/*)
+allowed-tools: Bash(python3 ~/.claude/skills/applied/tracker.py *), Bash(date *), Bash(~/Documents/resume/agent/build.sh *), Bash(mkdir -p ~/Documents/resume/tailored/*), Bash(mkdir -p ~/Downloads/Tailored_Resumes), Bash(cp ~/Documents/resume/*), Bash(open ~/Documents/resume/tailored/*)
 ---
 
 Apply to: $ARGUMENTS
@@ -37,9 +37,9 @@ Read `~/Documents/resume/agent/CONTEXT.md` in full and follow it over anything h
 1. Copy the starting `.tex` into `~/Documents/resume/tailored/<company>_<role>/`, lowercase with underscores like the existing folders. Make small edits to the copy. Never edit the base files for one application.
 2. Run `~/Documents/resume/agent/build.sh <path to the copy>`. Fix every PROBLEM line and any FILL warning the edits added, then build again.
 3. Read the PDF to check the layout, and `open` it so the user sees it.
-4. Copy the PDF to `~/Downloads` using the naming in CONTEXT.md. Never overwrite the base PDFs. If the user asks for more changes later, rebuild and replace this file.
+4. Run `mkdir -p ~/Downloads/Tailored_Resumes` and copy the PDF there, using the naming in CONTEXT.md. The base PDFs stay in `~/Downloads` and are never overwritten. If the user asks for more changes later, rebuild and replace this file.
 5. Add an entry to the top of the change log in CONTEXT.md, in the same style as the existing entries.
 
 ## 5. Report
 
-Keep it short: the sheet row added or skipped, the tailored folder, the PDF in `~/Downloads`, and any limits on who can apply.
+Keep it short: the sheet row added or skipped, the tailored folder, the PDF in `~/Downloads/Tailored_Resumes`, and any limits on who can apply.
